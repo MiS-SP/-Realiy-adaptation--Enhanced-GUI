@@ -8,10 +8,10 @@
 		<text>Weapons and Explosives (2)</text>
 	</string>
 	<string id="ui_st_tab_armor">
-		<text>Armour, Helmets and Backpacks (3)</text>
+		<text>Armour, Helmets, Backpacks and Attachements (3)</text>
 	</string>
 	<string id="ui_st_tab_ammo">
-		<text>Ammo and Grenades (4)</text>
+		<text>Ammo (4)</text>
 	</string>
 	<string id="ui_st_tab_artefact">
 		<text>Artefacts and Mutant Parts (5)</text>
@@ -19,36 +19,42 @@
 	<string id="ui_st_tab_tools">
 		<text>Devices, Tools and Repair Items (6)</text>
 	</string>
-	<string id="ui_st_tab_consumables">
-		<text>Medicine and Consumables (7)</text>
+	<string id="ui_st_tab_food">
+		<text>Drinks, Food, Cooking and Cigarettes (7)</text>
+	</string>
+	<string id="ui_st_tab_meds">
+		<text>Medicine (8)</text>
+	</string>
+	<string id="ui_st_tab_upgrades">
+		<text>Upgrades (for weapons and armor) (9)</text>
 	</string>
 	<string id="ui_st_tab_misc">
-		<text>Miscellaneous Items (8)</text>
+		<text>Miscellaneous Items (10)</text>
 	</string>
 		
 	<!-- Loot mode -->
 	<string id="ui_st_put_all">
-		<text>MOVE ALL</text>
+		<text>Move all</text>
 	</string>
 	<string id="ui_st_put_all_hint">
-		<text>MOVE ALL ITEMS (SHIFT + P)</text>
+		<text>Move all items (SHIFT + P)</text>
 	</string>
 	<string id="ui_st_take_all">
-		<text>TAKE ALL</text>
+		<text>Take all</text>
 	</string>
 	<string id="ui_st_take_all_hint">
-		<text>MOVE ALL ITEMS TO BACKPACK (SHIFT + T)</text>
+		<text>Move all items to your backpack (SHIFT + T)</text>
 	</string>
 	
 	<!-- Trade mode -->
 	<string id="ui_total_price">
-		<text>TOTAL</text>
+		<text>Total</text>
 	</string>
 	<string id="ui_st_buy">
-		<text>BUY</text>
+		<text>Buy</text>
 	</string>
 	<string id="ui_st_sell">
-		<text>SELL</text>
+		<text>Sell</text>
 	</string>
 	<string id="ui_st_sell_hint">
 		<text>Sell selected items</text>
@@ -60,7 +66,7 @@
 		<text>Not enough money</text>
 	</string>
 	<string id="not_enough_money_partner">
-		<text>The character does not have enough money.</text>
+		<text>The character does not have enough money</text>
 	</string>
 	<string id="st_no_trade_tip_1">
 		<text>The trader isn’t interested in items like this.</text>
@@ -102,7 +108,7 @@
 		<text>attach scope to</text>
 	</string>
 	<string id="st_attach_silencer_to_pistol">
-		<text>attach suppressor to</text>
+		<text>attach silencer to</text>
 	</string>
 	<string id="st_base_cost">
 		<text>Price</text>
@@ -120,7 +126,7 @@
 		<text>detach scope</text>
 	</string>
 	<string id="st_detach_silencer">
-		<text>detach suppressor</text>
+		<text>detach silencer</text>
 	</string>
 	<string id="st_drop">
 		<text>drop</text>
@@ -198,7 +204,7 @@
 		<text>unpack batteries</text>
 	</string>
 	<string id="st_item_tear_patch">
-		<text>tear off patch</text>
+		<text>tear patch off</text>
 	</string>
 	<string id="st_item_attach_patch">
 		<text>attach patch</text>
@@ -250,10 +256,10 @@
 		<text>plant with proximity trigger</text>
 	</string>
 	<string id="st_plant_explosive_timer_10">
-		<text>plant with 10 second timer</text>
+		<text>plant with 10 seconds timer</text>
 	</string>
 	<string id="st_plant_explosive_timer_30">
-		<text>plant with 30 second timer</text>
+		<text>plant with 30 seconds timer</text>
 	</string>
 
 	<!-- Units -->
@@ -270,22 +276,22 @@
 		<text>kcal eq.</text>
 	</string>
 	<string id="st_kcal_sec">
-		<text>kcal/sec eq.</text>
+		<text>kcal / sec eq.</text>
 	</string>
 	<string id="st_msv">
 		<text>mSv</text>
 	</string>
 	<string id="st_msv_sec">
-		<text>mSv/sec</text>
+		<text>mSv / sec</text>
 	</string>
 	<string id="st_microg">
 		<text>µg of adren.</text>
 	</string>
 	<string id="st_microg_sec">
-		<text>µg of adren./sec</text>
+		<text>µg of adren. / sec</text>
 	</string>
 	<string id="st_ml_min">
-		<text>ml/min</text>
+		<text>ml / min</text>
 	</string>
 	<string id="st_kw_m2">
 		<text>kW/m2</text>
@@ -335,94 +341,37 @@
 	
 	<!-- Player states -->
 	<string id="st_ui_main_sensor">
-		<text>%c[0,255,255,255]RADIATION\n
-		%c[ui_gray_2]This stat determines how much radiation is currently stored within the actor's body.\n
-		Exposure to ionizing radiation poses an extreme, perhaps even fatal, risk. For this reason, the ability to adequately measure radiation levels is a vital skill. The basic unit is the millisievert (mSv).\n\n
-		%c[0,255,255,255]Mitigation Strategy:\n
-		%c[d_cyan] • %c[0,255,255,255]Useful Items: %c[ui_gray_2]Anti-radiation drugs, Cystamine, Potassium Iodide, Radopprotectant, AI-2 Medkit, Scientific Medkit, Axyltallisal, Scientific Stimpack, Small Survival Kit\n
-		%c[d_cyan] • %c[0,255,255,255]Useful Equipment: %c[ui_gray_2]Protective suits, radiation suits and mask\breathing apparatus.\n
-		</text>
+		<text>Ionising radiation poisoning\n \n%c[ui_gray_1]Exposure to ionising radiation poses an extreme, perhaps even fatal, risk. For this reason, the ability to adequately measure radiation levels is a vital skill. The basic unit in the scale of ionising radiation is millisievert %c[ui_gray_3](mSv)%c[ui_gray_1]. Levels of approximately %c[ui_gray_3]8000 mSv %c[ui_gray_1]are usually lethal without a chance of recovery. Radiation levels above the threshold of 1000 mSv (see below) can be briefly endured, but are highly problematic if left untreated. In case of exposure, it is thus strongly advised to administer anti-radiation drugs of appropriate potency as soon as possible. Table 3.2 presents radiation levels with typical symptoms:\n \n%c[0,102,255,0]250 - 1500 mSv: %c[ui_gray_2]Symptoms are unnoticeable. Long term consequences are negligible.\n \n%c[0,255,255,0]1500 - 3000 mSv: %c[ui_gray_2]Noticeable moderate to strong sickness, light-headedness, skin stains. Long-term symptoms are mild. Full recovery is possible if treated promptly.\n \n%c[0,255,122,0]3000 - 4500 mSv: %c[ui_gray_2]Very strong sickness, confusion and dizziness leading to premature death if not treated in relatively short time. Complete cease of hunger and thirst, taint, diarrhoea, peeling of skin and hair loss. High risk of permanent loss of reproduction ability. Restoration of bodily functions is feasible with extensive use of cleansing agents.\n \n%c[d_red]4500 - 6000 mSv: %c[ui_gray_2]Intensification of the above symptoms. Additionally, permanent damage to central nervous system. Death highly probable.\n \n%c[d_red]6000 mSv and above: %c[ui_gray_2]Imminent death. Often after rapid loss of consciousness.\n \n%c[d_cyan] • %c[ui_gray_2] unit: %c[ui_gray_1]mSv (milisivert)\n%c[d_cyan] • %c[ui_gray_2] imminent lethal radiation: %c[ui_gray_1]~6000+ mSv\n%c[d_cyan] • %c[ui_gray_2] av. outside rad. hot-spots potency: %c[ui_gray_1]~900 mSv / min\n \n \n</text>
 	</string>
 	<string id="ui_inv_burn_protection">
-		<text>%c[0,255,255,255]BURN RESISTANCE\n
-		%c[ui_gray_2]This stat determines the actor's resistance to the typical fire anomaly within the Chernobyl Exclusion Zone:\n
-		%c[0,255,255,255]Mitigation Strategy:\n
-		%c[d_cyan] • %c[0,255,255,255]Useful Equipment: %c[ui_gray_2]Protective suits\equipment\armor.\n
-		</text> 
+		<text>Burn Resistance\n \n%c[ui_gray_1]Typical fire anomaly in the Chernobyl Exclusion Zone is composed of two separate elements: %c[ui_gray_1]hemisphere-shaped thermal radiation field %c[ui_gray_1]- producing constant flux of density up to %c[ui_gray_3]50 kW / m2%c[ui_gray_1], inducing temperatures of up to %c[ui_gray_3]430 °C%c[ui_gray_1], and %c[ui_gray_3]'burner anomalies' -%c[ui_gray_1] destructive emissions of flames of up to %c[ui_gray_3]1000 °C%c[ui_gray_1] launching upwards from a single point usually located approx. 10 cm above the ground. For the purposes of assessment of Exclusion Zone's fire anomalies and in order to indicate available counter-measures a %c[ui_gray_3]kW/m2%c[ui_gray_1] (kilowatts per square meter equivalents) scale is used. This unit indicates a density of heat flux generated by the anomaly and thus the volume of energy.\n \n%c[d_cyan] • %c[ui_gray_2] inside an average campfire: %c[ui_gray_1]500 °C or 29 kW/m2\n%c[d_cyan] • %c[ui_gray_2] average thermal rad. field flux: %c[ui_gray_1]620 °C or 51,5 kW/m2\n \n%c[d_cyan] • %c[ui_gray_2] average burner outburst: %c[ui_gray_1]1000 °C or 212 kW/m2\n \n%c[d_cyan] • %c[ui_gray_2] approx. unprotected survival time: %c[ui_gray_1]RF: 1,5 min / BU: 0,5 sec\n%c[d_cyan] • %c[ui_gray_2] approx. complete armour degr. time: %c[ui_gray_1]RF: 10 min / BU: 6 sec\n \n%c[ui_gray_2]RF = radiation field ; BU = 'burner anomaly'\n \n%c[ui_gray_3]2. Acid\n \n%c[ui_gray_1]It is common knowledge that potent pools of acid (called 'fruit punch anomalies') can be found within Exclusion Zone's areas of high toxicity ('toxic anomalies'). These gravitationally sustained 'tanks' are extremely unstable and lose their form the moment they come in contact with solid matter. Any such occurrence produces a powerful outburst equivalent to the use of up to %c[ui_gray_3]0,5 litres%c[ui_gray_1] of potent oxidising agents / sulphuric acid of %c[ui_gray_3]50%%c[ui_gray_1] condensation. These outbursts entail the eruption of liquid solution which spreads in a form of droplets launching upwards in approximately %c[ui_gray_3]2-meter%c[ui_gray_1] radius. In order to facilitate comparison, the potency of acids is usually measured in thermal radiation scale of %c[ui_gray_3]kW / m2%c[ui_gray_1] equivalents.\n \n%c[d_cyan] • %c[ui_gray_2] average potency of 'fruit punch' droplet: %c[ui_gray_1]270 °C or 70 kW/m2 eq.\n \n \n</text> 
 	</string>
 	<string id="ui_inv_chemical_burn_protection">
-		<text>%c[0,255,255,255]CHEMICAL RESISTANCE\n
-		%c[ui_gray_2]This stat determines the actor's resistance to the typical chemical anomaly within the Chernobyl Exclusion Zone:\n
-		%c[0,255,255,255]Mitigation Strategy:\n
-		%c[d_cyan] • %c[0,255,255,255]Useful Items: %c[ui_gray_2]Chlortetracycline, Sulfadimethoxine, Antidote\n
-		%c[d_cyan] • %c[0,255,255,255]Useful Equipment: %c[ui_gray_2]Protective suits\equipment\armor.\n
-		</text>
+		<text>Chemical Resistance\n \n%c[ui_gray_1]Due to the not yet fully grasped nature of substances found inside so called %c[ui_gray_3]'toxic' or 'chemical' anomalies%c[ui_gray_1], danger assessment has to be performed in compliance with the universal %c[ui_gray_3]LC50 (human)%c[ui_gray_1] standard.\n \n%c[ui_gray_1]This standard measures overall toxicity of gaseous agents based on their level of concentration and indicates the dose which is required to kill %c[ui_gray_3]50%%c[ui_gray_1] of any random human 'test group' during exposure lasting %c[ui_gray_3]1 hour%c[ui_gray_1].\n \n%c[ui_gray_1]As in most cases it only takes 10 parts per million %c[ui_gray_3](ppm)%c[ui_gray_1] condensation for Exclusion Zone's anomalous, bio-chemical agents to exceed %c[ui_gray_3]50% / 1 h%c[ui_gray_1] fatality rate, it is justified to include them in %c[ui_gray_3]Class I (C1) group%c[ui_gray_1] which comprises most potent toxic substances known to science. Exclusion Zone's anomalous toxic areas have been proven to have average concentration of as much as %c[ui_gray_3]C1 200 ppm%c[ui_gray_1] (parts per million), whereas '200' denotes the number of 'parts' (particles) of typical Class I substance diluted in 1,000,000 parts of the solution. This level of toxicity makes Exclusion Zone's anomalies one of the most hazardous environments on the planet, strong enough to kill an average human being not protected with scientific equipment in about %c[ui_gray_3]3 minutes%c[ui_gray_1].\n \n%c[ui_gray_1]For this reason and for assessment purposes, potency of anomalous areas and effectiveness of protective gear is graded based on the amount of parts of Class I %c[ui_gray_3](C1)%c[ui_gray_1] toxic substance per million parts %c[ui_gray_3](ppm)%c[ui_gray_1] of the solution. This approach results in an universal 'anomalous' toxicity unit of %c[ui_gray_3]C1 ppm equivalent%c[ui_gray_1]. In case of equipment, this value indicates the C1 ppm toxicity concentration which certain item is able to protect from.\n \n%c[d_cyan] • %c[ui_gray_2] av. toxic anomaly potency: %c[ui_gray_1]~200 C1 ppm eq.\n%c[d_cyan] • %c[ui_gray_2] max. registered toxic anomaly potency: %c[ui_gray_1]~600 C1 ppm eq.\n%c[d_cyan] • %c[ui_gray_2] av. unprot. survival time: %c[ui_gray_1]~3 min \n%c[d_cyan] • %c[ui_gray_2] av. time for compl. suit degr.: %c[ui_gray_1]~25 min.\n \n \n</text>
 	</string>
 	<string id="ui_inv_fire_wound_protection">
-		<text>%c[0,255,255,255]BALLISTIC RESISTANCE\n
-		%c[ui_gray_2]Ballistic resistance indicates the anti-ballistic properties of your body armor (the ability to safely absorb the kinetic energy of small, high-velocity objects such as bullets or shrapnel). For assessment purposes, the internationally recognized, American National Institute of Justice (NIJ) system is used:\n\n
-		%c[d_cyan] • %c[ui_gray_2] ARMOR GRADATION CHART:\n
-		%c[d_cyan] • %c[ui_gray_2] NONE:%c[ui_gray_2] 9x18mm, .45 ACP, 12x70 shot\n
-		%c[d_cyan] • %c[ui_gray_2] CLASS I:%c[ui_gray_2] 9x18mm +P+, 9x19mm FMJ, 9x19mm JHP, grenade shrapnel\n
-		%c[d_cyan] • %c[ui_gray_2] CLASS IIA and II:%c[ui_gray_2] 9x18mm RG028, .45 HS, 5.7x28mm SS195, .357 HP, 12x76 slug\n
-		%c[d_cyan] • %c[ui_gray_2] CLASS IIIA:%c[ui_gray_2] 9x19mm AP, 5.45x39mm FMJ/EP, 5.56x45mm FMJ, 7.62x51mm NATO ball, 9x39mm SP-5, 12x76 dart\n
-		%c[d_cyan] • %c[ui_gray_2] CLASS III:%c[ui_gray_2] 5.56x45mm EP/AP, 7.62x39mm FMJ/AP, 7.62x54mm ZN1/PP, 7.92x57mm Mauser, 9x39mm SP-6, 12.7x55mm STs-130\n
-		%c[d_cyan] • %c[ui_gray_2] CLASS IV:%c[ui_gray_2] 5.45x39mm AP, 7.62x51mm NATO AP, 7.62x54mm AP/7H14, 7.92x57mm SA, .338 Lapua Magnum, 12.7x55mm STs-130 VPS\n
-		%c[d_cyan] • %c[ui_gray_2] CLASS V (exoskeleton):%c[d_red] classified\n
-		%c[0,255,255,255]NOTE:\n
-		%c[ui_gray_2]The above-mentioned protection levels only relate to counter-penetration properties of armour. Bullet impact is still capable of inflicting damage by means of blunt trauma due to pure kinetic energy.\n
-		</text>
+		<text>Ballistic Resistance\n \n%c[ui_gray_1]Ballistic resistance, as one might expect, indicates the %c[ui_gray_3]anti-ballistic%c[ui_gray_1] properties of your body armour - the ability to safely absorb the kinetic energy of small, high-velocity objects such as bullets or shrapnel. For assessment purposes, we use the internationally-recognised, American National Institute of Justice (NIJ) system of gradation for protective clothing. This gradation is based on the amount of firearm projectile energy the armour is able to withstand.\n \n%c[ui_gray_3]ARMOR GRADATION CHART:\n \n%c[ui_gray_3]NONE:%c[ui_gray_1] 9x18 mm, .45 ACP, 12x70 shot\n \n%c[ui_gray_3]CLASS I:%c[ui_gray_1] 9x18 mm +P+, 9x19 mm FMJ, 9x19 mm JHP, grenade shrapnel\n \n%c[ui_gray_3]CLASS IIA and II:%c[ui_gray_1] 9x18 mm RG028, .45 HS, 5.7x28 mm SS195, .357 HP, 12x76 slug\n \n%c[ui_gray_3]CLASS IIIA:%c[ui_gray_1] 9x19 mm AP, 5.45x39 mm FMJ/EP, 5.56x45 mm FMJ, 7.62x51 mm NATO ball, 9x39 mm SP-5, 12x76 dart\n \n%c[ui_gray_3]CLASS III:%c[ui_gray_1] 5.56x45 mm EP/AP, 7.62x39 mm FMJ/AP, 7.62x54 mm ZN1/PP, 7.92x57 mm Mauser, 9x39 mm SP-6, 12.7x55 mm STs-130\n \n%c[ui_gray_3]CLASS IV:%c[ui_gray_1] 5.45x39 mm AP, 7.62x51 mm NATO AP, 7.62x54 mm AP/7H14, 7.92x57 mm SA, .338 Lapua Magnum, 12.7x55 mm STs-130 VPS\n \n%c[ui_gray_3]CLASS V (exoskeleton):%c[d_red] classified\n \n%c[d_red]IMPORTANT:\n \n%c[ui_gray_1]The above-mentioned protection levels only relate to counter-penetration properties of armour. Bullet impact, even if it does not manage to pierce the armour, is still capable of inflicting damage by means of %c[ui_gray_3]blunt trauma%c[ui_gray_1] due to pure kinetic energy of the bullet. Most commonly, the only effect of such an impact would be the oedema of soft tissues, but if the force is strong enough it can lead to open %c[ui_gray_3]bone fractures%c[ui_gray_1] causing a bleeding wound which, if untreated, can result in death. Suits augmented with %c[ui_gray_3]metal%c[ui_gray_1] (especially titanium or steel) significantly reduce the probability of open bone fractures and the overall negative effects of bullet impacts.\n \n \n</text>
 	</string>
 	<string id="ui_inv_radiation_protection">
-		<text>%c[0,255,255,255]Radiation Resistance\n
-		%c[ui_gray_2]This stat determines the actor's resistance to radiation:\n
-		%c[0,255,255,255]Mitigation Strategy:\n
-		%c[d_cyan] • %c[0,255,255,255]Useful Items: %c[ui_gray_2]Anti-radiation drugs, Cystamine, Potassium Iodide, Radopprotectant, AI-2 Medkit, Scientific Medkit, Axyltallisal, Scientific Stimpack, Small Survival Kit.\n
-		%c[d_cyan] • %c[0,255,255,255]Useful Equipment: %c[ui_gray_2]Protective suits\armor, radiation suits and\or mask\breathing apparatus.\n
-		</text>
+		<text>External Radiation Resistance\n \n%c[ui_gray_1]Current readings indicate that radiation most commonly encountered in the Exclusion Zone travels by means of solid %c[ui_gray_3]alpha %c[ui_gray_1]particles which are present in dirt, sand, water and other objects and thus in all organisms living in the area for prolonged periods of time. Such radiation cannot penetrate the skin and is harmful only if charged particles come into direct contact with tissues and make their way into the bloodstream - for example through the inhalation of air polluted with dust or by eating contaminated food. For this reason, it is strongly advised to wear filtered breathing apparatus in the Exclusion Zone at all times and avoid reliance on local food and water sources.\n \n%c[ui_gray_1]As for penetrating %c[ui_gray_3]beta%c[ui_gray_1] radiation - our data confirm that it is still mostly concentrated around the CPP Unit 4 sarcophagus. However, it has been recently found that certain species within the Exclusion Zone emit penetrating ionising radiation field at close range. For reasons unknown, effects of this field cease as soon as the creature dies.\n \n%c[ui_gray_1]The final and the most dangerous source of ionising radiation within the Exclusion Zone are surge emissions during which gamma blasts of various potency have been detected. Due to the amount of pure energy released and penetrating power of gamma radiation, it is highly recommended to take cover in safe locations whenever an emission takes place.\n \n%c[d_cyan] • %c[ui_gray_2]cloth mask protection rate: %c[ui_gray_1]45%\n%c[d_cyan] • %c[ui_gray_2]breathing filters protection rate: %c[ui_gray_1]90%\n%c[d_cyan] • %c[ui_gray_2]environmental suit protection rate: %c[ui_gray_1]100%\n \n%c[d_red]IMPORTANT:\n \n%c[ui_gray_1]All suits and headgear have undergone heavy field testing against all types of radiation. Results of these tests have been included in the manual, but should be regarded as incomplete and providing only rough guidelines.\n \n \n</text>
 	</string>
 	<string id="ui_inv_shock_protection">
-		<text>%c[0,255,255,255]Electrical Resistance\n
-		%c[ui_gray_2]This stat determines the actor's resistance to the typical electrical anomaly within the Chernobyl Exclusion Zone:\n
-		%c[0,255,255,255]Mitigation Strategy:\n
-		%c[d_cyan] • %c[0,255,255,255]Useful Equipment: %c[ui_gray_2]Protective suits\equipment\armor.\n
-		</text>
+		<text>Electrical Resistance\n \n%c[ui_gray_1]Electrical anomalies of the Chernobyl Exclusion Zone are potentially one of its most beneficial creations. Powerful and constant electric arcs stretched in what appears to be a simple composition of gases could, if harnessed, provide enormous amounts of pure energy. Unfortunately, every attempt to obtain electricity from these anomalies so far has been to no avail as they are extremely unstable - any contact with solid matter results in massive outbursts of energy. Such phenomena are unheard of in modern science as our sensors have registered a sudden rise in both voltage and current that would cause any capacitors currently produced to overheat due to the erratic nature of the anomaly.\n \n%c[ui_gray_1]Voltage peaks produced during such outbursts amount to %c[ui_gray_3]4,0 megavolts (MV)%c[ui_gray_1], which allows the current to reach as high as %c[ui_gray_3]3,5 metres%c[ui_gray_1] above the ground. Since the outbursts last around %c[ui_gray_3]50 milliseconds%c[ui_gray_1], energy produced inside the anomaly per one outburst is often not enough to kill a healthy grown man. However, extensive health damage and severe trauma should be expected and the second outburst (which is very likely to occur if one does not exit the field promptly) is in most cases fatal.\n \n%c[ui_gray_1]As is the case with all static electrical discharges, the best means of protection is increasing electrical resistance of the body. This can be achieved in several ways, primarily by wearing protective, non-conductive clothing.\n \n%c[ui_gray_1]For your purposes, the effectiveness of all means of electrical resistance and combat armours is measured in the number of kilovolts %c[ui_gray_3](kV)%c[ui_gray_1] a given piece of equipment is able to resist during a single %c[ui_gray_3]3000 kV%c[ui_gray_1] / %c[ui_gray_3]50 ms%c[ui_gray_1] outburst of electrical anomaly.\n \n%c[d_cyan] • %c[ui_gray_2] av. electrical anomaly power: %c[ui_gray_1]~3 MV\n%c[d_cyan] • %c[ui_gray_2] single outburst dam. rate to unprot. body: %c[ui_gray_1]95%\n \n \n</text>
 	</string>
 	<string id="ui_inv_telepatic_protection">
-		<text>%c[0,255,255,255]Psychic Resistance\n
-		%c[ui_gray_2]This stat determines the actor's resistance to psy fields within the Chernobyl Exclusion Zone:\n
-		%c[0,255,255,255]Mitigation Strategy:\n
-		%c[d_cyan] • %c[0,255,255,255]Useful Items: %c[ui_gray_2]Etperazine, Psy-block, Sleeping Pills, Cannabis Joint, Marijuana\n
-		</text>
+		<text>Psychic Resistance\n \n%c[ui_gray_1]Scientific data regarding the origin and nature of so called 'psy fields' found within the Chernobyl Exclusion Zone is %c[d_red]classified%c[ui_gray_1], with all but the most elementary data being revealed only on a strict "need to know" basis.\n \n%c[ui_gray_1]It is, however, essential for any stalker to be aware of the fact that these forces pose an extreme danger to any human being and should be avoided at all costs. Under 'ordinary' circumstances, such fields take on a hemispherical shape with the source at their centre. In all cases, however, they are able to either immediately kill or induce an unrecoverable coma within seconds of exposure (this applies to any human being not protected with additional equipment). The potency of a psy field varies depending on the distance from the source: the weakest being at the edges of the field and increasing at a geometric rate the closer to the source.\n \n%c[ui_gray_1]It has been established that beside the main 'psy radiation', each field also produces a faint, low frequency %c[ui_gray_3](50-60 Hz)%c[ui_gray_1] magnetic field which seems completely harmless; this field can be easily detected and measured for the purposes of assessment of main psy field's strength. Potency of psy fields (and effectiveness of counter-measures) is given in milliteslas %c[ui_gray_3](mT)%c[ui_gray_1] which indicate the intensity of accompanying magnetic field.\n \n%c[ui_gray_3]KNOWN SOURCES:\n \n%c[d_cyan] • %c[ui_gray_2] surge emission: %c[ui_gray_1]35 mT (constant flux) ; 660 mT (blowout wave) \n%c[d_cyan] • %c[ui_gray_2] average psy anomaly: %c[ui_gray_1]E 3mT ; C 45 mT\n%c[d_cyan] • %c[ui_gray_2] controller mutant: %c[ui_gray_1]E 5 mT ; C 75 mT ; R 33 m\n%c[d_cyan] • %c[ui_gray_2] poltergeist mutant: %c[ui_gray_1]E 8 mT ; C 90 mT ; R 52 m\n%c[d_cyan] • %c[ui_gray_2] burer mutant: %c[ui_gray_1]E 2 mT ; C 50 mT ; R 26 m\n%c[d_cyan] • %c[ui_gray_2] psy-dog mutant: %c[ui_gray_1]E 0.1 mT ; C 15 mT ; R 23 m\n%c[d_cyan] • %c[ui_gray_2] Yantar complex (while active): %c[ui_gray_1]E 0.001 mT ; C 1800 mT (est.) ; R ~3,5 km\n%c[d_cyan] • %c[ui_gray_2] 'Brain scorcher' (while active): %c[ui_gray_1]E 0.001 mT ; C 6500 mT (est.) ; R ~20 km\n \n%c[ui_gray_2]E = edge of the field\n%c[ui_gray_2]C = epicentre of the field\n%c[ui_gray_2]R = range\n \n \n</text>
 	</string>
 	<string id="ui_inv_wound_protection">
-		<text>%c[0,255,255,255]Rupture Resistance\n
-		%c[ui_gray_2]Rupture resistance represents your armor's ability to absorb and displace trauma imparted by all sorts of physical blows and impacts. These include-but are not limited to-attempted punches, kicks, stabs, cuts, bites and telekinetically thrown debris.\n
-		%c[0,255,255,255]Mitigation Strategy:\n
-		%c[d_cyan] • %c[0,255,255,255]Useful Equipment: %c[ui_gray_2]Protective suits\equipment\armor.\n
-		</text>
+		<text>Rupture Resistance\n \n%c[ui_gray_1]Rupture resistance represents your armour's ability to absorb and displace the trauma imparted by all sorts of physical blows and impacts. These include - but are not limited to - attempted punches, kicks, stabs, cuts, bites and telekinetically thrown debris. \n \n%c[ui_gray_1] This aspect of your armour is not to be ignored, especially by those who fight against mutants often. Although even a thin layer of protective material would keep you out of harm's way for day-to-day life, in the Exclusion Zone it is advisable to use specially designed anti-laceration fibres as soon as possible.\n \n%c[ui_gray_1]Rupture resistance values of your armour also synergise with your ballistic resistance as even bullets which do not penetrate your ballistic armour can still cause blunt trauma, which rupture resistance can reduce. This is especially true of any NIJ %c[ui_gray_3]Class AIII%c[ui_gray_1] and above which have a large number of integrated %c[ui_gray_3]metal plates%c[ui_gray_1].\n \n%c[d_red]IMPORTANT:\n \n%c[ui_gray_1]Even though clothing of high durability and thickness can significantly reduce damage inflicted by firearm projectiles and animal attacks of all kinds, the materials the clothing are made of are not indestructible and will slowly degrade, gradually decreasing its environmental and physical protection values. The rate at which armour degrades %c[ui_gray_3]is not a constant value%c[ui_gray_1] and depends on the condition of the unit, which means that %c[ui_gray_3]the condition of equipment will deteriorate the faster the more damaged the equipment is.\n \n%c[ui_gray_1]For this reason, it is %c[ui_gray_3]strongly advised%c[ui_gray_1] to undertake maintenance of suits and headgear as frequently as possible and to avoid taking severe, structural damage.\n \n \n</text>
 	</string>
 	<string id="ui_inv_power_restore">
-		<text>%c[0,255,255,255]Stamina Recovery\n
-		%c[ui_gray_2]Your stamina level represents the available physical energy stored in the actor's body. This energy is used for a variety of purposes, most notably running. Severe loss of stamina may cause loss of movement. It is thus vital to eat, drink and sleep to regain your energy, and to check the weight of your backpack as the amount carried influences the rate of exhaustion. Drugs and artefacts can provide a boost to stamina recovery.\n
-		%c[0,255,255,255]Mitigation Strategy:\n
-		%c[d_cyan] • %c[0,255,255,255]Useful Items: %c[ui_gray_2]Epinephrine Shot, Caffeine Tablets, Cocaine, Hercules, Glucose Shot, Large Glucose Shot, Army Medkit\n
-		</text>
+		<text>Stamina Recovery\n \n%c[ui_gray_1]Your stamina level represents the available physical energy stored in your body. This energy is used for a variety of purposes, most notably running, and severe loss of stamina may make you unable to move. It is thus vital to eat, drink and sleep to regain your energy, and to check the weight of your backpack as the amount you carry influences the rate at which you're getting tired. Drugs and artefacts can provide a boost to stamina recovery. This much information should be just enough, but your (somewhat outdated) Survival Guide reads as follows:\nRecovery and loss rate of stamina is dependent on numerous factors which can generally be divided into: 'nutrition', 'equipment', 'chemical' and 'artefact-based' categories. For analytic convenience, a following list of most important %c[ui_gray_3]stamina restoration facts%c[ui_gray_1] has been prepared for quick reference:\n \n%c[ui_gray_3]FACT 1:%c[ui_gray_1] Nutrition can only fill the stamina bar in approx. %c[ui_gray_3]33%%c[ui_gray_1]. Exact level of this 'natural maximum' depends on your equipment and training.\n%c[ui_gray_3]FACT 2:%c[ui_gray_1] To keep the bar at 'nominal' %c[ui_gray_3]33%%c[ui_gray_1] consumption of %c[ui_gray_3]kcal eq.%c[ui_gray_1] is required.\n%c[ui_gray_3]FACT 3:%c[ui_gray_1] Nominal 33% level will decrease if your %c[ui_gray_3]armour is limiting%c[ui_gray_1] your mobility.\n%c[ui_gray_3]FACT 4:%c[ui_gray_1] Stamina recovery also %c[ui_gray_3]linearly increases and decreases based on the weight of equipment carried,%c[ui_gray_1] but this factor %c[ui_gray_3]is not%c[ui_gray_1] represented on the bar.\n%c[ui_gray_3]FACT 5:%c[ui_gray_1] To make the bar go higher than nominal %c[ui_gray_3]~33%%c[ui_gray_1] one has to use %c[ui_gray_3]various chemical substances or artefacts%c[ui_gray_1] increasing stamina recovery.\n%c[ui_gray_3]FACT 6:%c[ui_gray_1] Potency of %c[ui_gray_3]chemical boosters%c[ui_gray_1] is given in %c[ui_gray_3]µg%c[ui_gray_1] (micrograms) of %c[ui_gray_3]adrenaline%c[ui_gray_1] they 'produce' within the body and release into the bloodstream.\n%c[ui_gray_3]FACT 7:%c[ui_gray_1] Adrenaline present in the body is on the level of %c[ui_gray_3]90 µg%c[ui_gray_1]. To double this amount one has to consume an equivalent of %c[ui_gray_3]400 mg of caffeine%c[ui_gray_1].\n%c[ui_gray_3]FACT 8:%c[ui_gray_1] To %c[ui_gray_3]double%c[ui_gray_1] the speed of stamina recovery one has to rapidly increase the nominal adrenaline level %c[ui_gray_3]five times%c[ui_gray_1], i.e. to %c[ui_gray_3]500 µg%c[ui_gray_1].The effectiveness of various substances is %c[ui_gray_3]not stackable%c[ui_gray_1].\n%c[ui_gray_3]FACT 9:%c[ui_gray_1] To raise the bar beyond chemically-boosted %c[ui_gray_3]66%%c[ui_gray_1], artefacts are required. Artefact boosting effect is stackable.\n \n \n</text>
 	</string>
 	<string id="st_ui_bleeding_sensor">
-		<text>%c[0,255,255,255]Bleeding\n
-		%c[ui_gray_2]Bleeding can drain vitality at a very fast rate if not treated promptly. Bleeding wounds are most often the result of external physical force penetrating body armor and rupturing the skin and are sometimes accompanied by damage to internal organs. Bleeding can also be the effect of open bone fractures caused by blunt trauma.\n
-		%c[0,255,255,255]Mitigation Strategy:\n
-		%c[d_cyan] • %c[0,255,255,255]Useful Items: %c[ui_gray_2]Bandage, Vinca, Army Medkit, Scientific Medkit, Small Survival Kit\n
-		</text>
+		<text>Bleeding\n \n%c[ui_gray_1]Bleeding can drain vital power at a very fast rate if not treated promptly. Bleeding wounds are most often the result of external physical force of any type penetrating the body armour and rupturing the skin, and are sometimes accompanied by damage to your internal organs. Bleeding can also be the effect of open bone fractures caused by blunt trauma.\n \n%c[ui_gray_1]The average special forces operative can withstand a blood loss of up to approximately %c[ui_gray_3]2.7 litres %c[ui_gray_1]without losing consciousness. Extremely serious (or a large number of smaller) wounds can cause blood loss of this magnitude in %c[ui_gray_3]5 to 10 minutes%c[ui_gray_1]. Bandages or field wound sewing kits can effectively stop the bleeding, while drugs increasing blood density or coagulating agents can be used to reduce the overall rate of bleeding.\n \n%c[d_cyan] • %c[ui_gray_2] body blood volume: %c[ui_gray_1]~5,5 litres\n%c[d_cyan] • %c[ui_gray_2] deadly blood loss: %c[ui_gray_1]~2,7 litres\n%c[d_cyan] • %c[ui_gray_2] 5.45 cal. shot to unprot. torso: %c[ui_gray_1]~320 ml / min\n%c[d_cyan] • %c[ui_gray_2] bandage effectiveness: %c[ui_gray_1]~270 ml / min \n \n%c[ui_gray_1]Chart:\n \n%c[0,102,255,0]0 - 100 ml / min: %c[ui_gray_2] mild\n%c[0,255,255,0]100 - 200 ml / min: %c[ui_gray_2]significant\n%c[0,255,122,0]200 - 300 ml / min: %c[ui_gray_2] severe\n%c[d_red]300+ ml / min: %c[ui_gray_2]critical\n \n \n</text>
 	</string>
 	<string id="st_ui_health_sensor_inv">
-		<text>%c[0,255,255,255]Health\n
-		%c[ui_gray_2]Health is the overall vitality of the actor. Death will occur if this reaches zero.\n
-		In GAMMA, this is equivalent to the overall body health for Body Health System.
-		%c[0,255,255,255]Mitigation Strategy:\n
-		%c[d_cyan] • %c[0,255,255,255]Useful Items: %c[ui_gray_2]Diclofenac Sodium, AI-2 Medkit, Army Medkit, Scientific Medkit, Axyltallisal, Improvised Stimpack, Military Stimpack, Scientific Stimpack Small Survival Kit\n
-		</text>
+		<text>Health\n \n%c[ui_gray_1]Your health represents a simplified conglomeration of aspects, such as sanity, endurance, comfort, and even luck. The Zone is a complex maze, full of dangers, surprises, and traps. It's up to you to survive, and it's only by learning and bettering yourself that you'll continue to survive. \n \n%c[ui_gray_1]While superficial wounds won't immobilize you completely, they certainly cause %c[ui_gray_3]pain%c[ui_gray_1], and pain is dangerous: it may make your body %c[ui_gray_3]stop functioning%c[ui_gray_1]. Shock, loss of consciousness and physical burnout may follow, and then you're as good as dead, so tread carefully.\n \n%c[ui_gray_1]Armour and equipment cannot protect you from all dangers, nor are items the most important factor in your survival; it's your mind. However, your mind is not a constant. It's a variable. Psychological trauma makes you weak and drains your health.  On the other hand, you can also strengthen your mind by eating, drinking, sleeping, in a word: %c[ui_gray_3]by taking care of yourself%c[ui_gray_1]. Engage in activities that keep your spirit alive. And, in life-or-death scenarios, note that every second can mean the difference.\n \n%c[ui_gray_1] However, work in the Zone is never without danger, and the average stalker's life can be summed up thus: to return to the outside world with treasure is brilliant! Without scars? A miracle! And to not return at all?... That's just fate.\n \n \n</text>
 	</string>
 	
 	<!-- Item description-->
@@ -482,10 +431,10 @@
 		<text>Armour condition</text>
 	</string>
 	<string id="st_weight">
-		<text>WGT.</text>
+		<text>Wgt.</text>
 	</string>
 	<string id="st_weight_full">
-		<text>WEIGHT</text>
+		<text>Weight</text>
 	</string>
 	<string id="ui_ammo_count">
 		<text>Mag. size</text>
@@ -1018,7 +967,7 @@
 		<text>Swap items</text>
 	</string>
 	<string id="st_ui_cook_fuel_usable">
-		<text>Usable fuel</text>
+		<text>Useable fuel</text>
 	</string>
 	
 
@@ -1082,9 +1031,9 @@
 	</string>
 	
 	<string id="st_ui_workshop_info_state_intro">
-		<text>The workshop allows you to repair, upgrade and craft items by yourself with the help of proper toolkits.\n
-		The tools shown above represent the available main toolkits on this workshop, which allow further adjustments for your items.\n
-		Select one of the tabs to proceed.
+		<text>The workshop allows you to repair, upgrade and craft items by yourself with the help of proper toolkits.
+		\nThe tools shown above represent the available main toolkits on this workshop, which allow further adjustments for your items.
+		\nSelect one of the tabs to proceed.
 		</text>
 	</string>
 	<string id="st_ui_workshop_owner">
@@ -1095,14 +1044,14 @@
 	</string>
 	
 	<string id="st_ui_workshop_info_repair_intro">
-		<text>You can replace damaged parts of your weapon or outfit by using replacement parts and proper toolkit.\n
-		Choose the item you want to repair from your inventory.
+		<text>You can replace damaged parts of your weapon or outfit by using replacement parts and proper toolkit.
+		\nChoose the item you want to repair from your inventory.
 		</text>
 	</string>
 	<string id="st_ui_workshop_info_repair_tip_1">
-		<text>Each item has its own set of parts and materials.\n
-		Grayed parts indicate the lack of identical replacements for them in your inventory.\n
-		If you have the replacement part and a usable "%s" in your possession, click on the part you wish to replace.
+		<text>Each item has its own set of parts and materials
+		\nGrayed parts indicate the lack of identical replacements for them in your inventory.
+		\nIf you have the replacement part and a usable "%s" in your possession, click on the part you wish to replace.
 		</text>
 	</string>
 	<string id="st_ui_workshop_info_repair_warning_1">
@@ -1118,9 +1067,9 @@
 		<text>The majority of mechanics sell such tools. You also may be able to obtain them by other ways.</text>
 	</string>
 	<string id="st_ui_workshop_info_repair_tip_3">
-		<text>You can pick identical replacement parts "%s" from your inventory.\n
-		Only parts with higher condition can be used to improve your item.\n
-		Greyed parts means they have worse condition than your item's part. They are not suitable for proper replacement.
+		<text>You can pick identical replacement parts "%s" from your inventory.
+		\nOnly parts with higher condition can be used to improve your item.
+		\nGreyed parts means they have worse condition than your item's part. They are not suitable for proper replacement.
 		</text>
 	</string>
 	<string id="st_ui_workshop_info_repair_warning_3">
@@ -1135,15 +1084,15 @@
 	</string>
 	
 	<string id="st_ui_workshop_info_upgrade_intro">
-		<text>With the correct toolkits in your possession, you can install upgrades for your weapons and outfits.\n
-		Choose the item you want to upgrade from your inventory.
+		<text>With the correct toolkits in your possession, you can install upgrades for your weapons and outfits.
+		\nChoose the item you want to upgrade from your inventory.
 		</text>
 	</string>
 	<string id="st_ui_workshop_info_upgrade_tip_1">
-		<text>Each upgrade requires a specific toolset of the same type, in addition to usable "%s" to complete the process.\n
-		Additional conditions need to be met in order for the upgrade to be installed correctly.\n
-		Click on the upgrade you want to install on your selected item.\n
-		If the upgrade is disabled, hover on it to see all the missing requirements.
+		<text>Each upgrade requires a specific toolset of the same type, in addition to usable "%s" to complete the process.
+		\nAdditional conditions need to be met in order for the upgrade to be installed correctly.
+		\nClick on the upgrade you want to install on your selected item.
+		\nIf the upgrade is disabled, hover on it to see all the missing requirements.
 		</text>
 	</string>
 	<string id="st_ui_workshop_info_upgrade_warning_1">
@@ -1163,9 +1112,9 @@
 	</string>
 	
 	<string id="st_ui_workshop_info_craft_intro">
-		<text>A lot of materials can be used to craft various kinds of items.\n
-		Recipes and guides you've acquired through your journey can provide you with more information to craft more items.\n
-		Select an entry from the craft menu to see craftable items.
+		<text>A lot of materials can be used to craft various kinds of items.
+		\nRecipes and guides you've acquired through your journey can provide you with more information to craft more items.
+		\nSelect an entry from the craft menu to see craftable items.
 		</text>
 	</string>
 	<string id="st_ui_workshop_info_craft_tip_1">
@@ -1195,27 +1144,27 @@
 	</string>
 	
 	<string id="st_ui_workshop_info_state_1">
-		<text>The workshop allows you to repair, upgrade and craft items by yourself with the help of proper toolkits.\n
-		The tools shown above represent the available main toolkits on this workshop, which allow further adjustments for your items.\n
-		Select one of the tabs to proceed.
+		<text>The workshop allows you to repair, upgrade and craft items by yourself with the help of proper toolkits.
+		The tools shown above represent the available main toolkits on this workshop, which allow further adjustments for your items.
+		\nSelect one of the tabs to proceed.
 		</text>
 	</string>
 	
 	<string id="st_ui_workshop_info_repair_1">
-		<text>You can replace damaged parts of your weapon or outfit by using replacement parts and proper toolkit.\n
-		Choose the item you want to repair from your inventory.
+		<text>You can replace damaged parts of your weapon or outfit by using replacement parts and proper toolkit.
+		\nChoose the item you want to repair from your inventory.
 		</text>
 	</string>
 	<string id="st_ui_workshop_info_repair_2">
-		<text>Each item has its own set of parts and materials.\n
-		Grayed parts indicate the lack of identical replacements for them in your inventory.\n
-		If you have the replacement part and a usable "%s" in your possession, click on the part you wish to replace.
+		<text>Each item has its own set of parts and materials
+		\nGrayed parts indicate the lack of identical replacements for them in your inventory.
+		\nIf you have the replacement part and a usable "%s" in your possession, click on the part you wish to replace.
 		</text>
 	</string>
 	<string id="st_ui_workshop_info_repair_3">
-		<text>You can pick identical replacement parts from your inventory.\n
-		Only parts with higher condition can be used to improve your item.\n
-		Greyed parts means they have worse condition than your item's part. They are not suitable for proper replacement.
+		<text>You can pick identical replacement parts from your inventory.
+		\nOnly parts with higher condition can be used to improve your item.
+		\nGreyed parts means they have worse condition than your item's part. They are not suitable for proper replacement.
 		</text>
 	</string>
 	<string id="st_ui_workshop_info_repair_4">
@@ -1229,10 +1178,10 @@
 		</text>
 	</string>
 	<string id="st_ui_workshop_info_upgr_2">
-		<text>Each upgrade requires a specific toolset of the same type, in addition to usable "%s" to complete the process.\n
-		Additional conditions need to be met in order for the upgrade to be installed correctly.\n
-		Click on the upgrade you want to install on your selected item.\n
-		If the upgrade is disabled, hover on it to see all the missing requirements.
+		<text>Each upgrade requires a specific toolset of the same type, in addition to usable "%s" to complete the process.
+		\nAdditional conditions need to be met in order for the upgrade to be installed correctly.
+		\nClick on the upgrade you want to install on your selected item.
+		\nIf the upgrade is disabled, hover on it to see all the missing requirements.
 		</text>
 	</string>
 	<string id="st_ui_workshop_info_upgr_3">
@@ -1240,17 +1189,17 @@
 	</string>
 	
 	<string id="st_ui_workshop_info_craft_1">
-		<text>A lot of materials can be used to craft various kinds of items.\n
-		Recipes and guides you've acquired through your journey can provide you with more information to craft more items.\n
-		Select an entry from the craft menu to see craftable items.
+		<text>A lot of materials can be used to craft various kinds of items.
+		\nRecipes and guides you've acquired through your journey can provide you with more information to craft more items.
+		\nSelect an entry from the craft menu to see craftable items.
 		</text>
 	</string>
 	<string id="st_ui_workshop_info_craft_2">
 		<text>Select the item you want to craft.</text>
 	</string>
 	<string id="st_ui_workshop_info_craft_3">
-		<text>To craft this item, a set of specified components are required.\n
-		When you don't have the minimum amount of some component, it will be showed in red. Thus preventing the craft procedure.
+		<text>To craft this item, a set of specified components are required.
+		\nWhen you don't have the minimum amount of some component, it will be showed in red. Thus preventing the craft procedure.
 		</text>
 	</string>
 	<string id="st_ui_workshop_info_craft_4">

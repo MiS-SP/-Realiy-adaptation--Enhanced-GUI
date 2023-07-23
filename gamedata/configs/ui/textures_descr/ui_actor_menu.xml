@@ -1,5 +1,5 @@
 
-<!-- ENHANCED GUI © 2007 INCBOX INC TEAM + RANK FACTION-->
+<!-- ENHANCED GUI © 2007 INCBOX INC TEAM + RANK FACTION + SORTING TABS-->
 
 <w>
 	<file name="ui\ui_actor_menu_modern_trade_bg">
@@ -67,86 +67,6 @@
 		<texture id="ui_inGame2_backpack_blocker" 				x="1368" y="1834" width="228" height="206" />
 		<texture id="ui_inGame2_GameSpy_logo"     				x="0"    y="1600" width="1"   height="1" />
 
-		<texture id="ui_btn_sort_all_d"							x="0" y="1745" width="66" height="58" />
-		<texture id="ui_btn_sort_all_e"							x="0" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_all_h"							x="0" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_all_t"							x="0" y="1687" width="66" height="58" />
-
-		<texture id="ui_btn_sort_weapon_d"						x="66" y="1745" width="66" height="58" />
-		<texture id="ui_btn_sort_weapon_e"						x="66" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_weapon_h"						x="66" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_weapon_t"						x="66" y="1687" width="66" height="58" />	
-
-		<texture id="ui_btn_sort_outfit_d"						x="132" y="1745" width="66" height="58" />
-		<texture id="ui_btn_sort_outfit_e"						x="132" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_outfit_h"						x="132" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_outfit_t"						x="132" y="1687" width="66" height="58" />
-
-		<texture id="ui_btn_sort_ammo_d"						x="198" y="1745" width="66" height="58" />
-		<texture id="ui_btn_sort_ammo_e"						x="198" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_ammo_h"						x="198" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_ammo_t"						x="198" y="1687" width="66" height="58" />
-
-		<texture id="ui_btn_sort_arty_d"						x="264" y="1745" width="66" height="58" />
-		<texture id="ui_btn_sort_arty_e"						x="264" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_arty_h"						x="264" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_arty_t"						x="264" y="1687" width="66" height="58" />
-
-		<texture id="ui_btn_sort_utility_d"						x="330" y="1745" width="66" height="58" />
-		<texture id="ui_btn_sort_utility_e"						x="330" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_utility_h"						x="330" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_utility_t"						x="330" y="1687" width="66" height="58" />
-
-		<texture id="ui_btn_sort_consumable_d"					x="396" y="1745" width="66" height="58" />
-		<texture id="ui_btn_sort_consumable_e"					x="396" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_consumable_h"					x="396" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_consumable_t"					x="396" y="1687" width="66" height="58" />
-
-		<texture id="ui_btn_sort_misc_d"						x="462" y="1745" width="66" height="58" />
-		<texture id="ui_btn_sort_misc_e"						x="462" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_misc_h"						x="462" y="1687" width="66" height="58" />
-		<texture id="ui_btn_sort_misc_t"						x="462" y="1687" width="66" height="58" />
-
-		<texture id="ui_inGame2_btn_sort_all_d"					x="0" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_all_e"					x="0" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_all_h"					x="0" y="1745" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_all_t"					x="0" y="1745" width="66" height="58" />
-
-		<texture id="ui_inGame2_btn_sort_weapon_d"				x="66" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_weapon_e"				x="66" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_weapon_h"				x="66" y="1745" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_weapon_t"				x="66" y="1745" width="66" height="58" />	
-
-		<texture id="ui_inGame2_btn_sort_outfit_d"				x="132" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_outfit_e"				x="132" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_outfit_h"				x="132" y="1745" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_outfit_t"				x="132" y="1745" width="66" height="58" />
-
-		<texture id="ui_inGame2_btn_sort_ammo_d"				x="198" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_ammo_e"				x="198" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_ammo_h"				x="198" y="1745" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_ammo_t"				x="198" y="1745" width="66" height="58" />
-
-		<texture id="ui_inGame2_btn_sort_arty_d"				x="264" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_arty_e"				x="264" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_arty_h"				x="264" y="1745" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_arty_t"				x="264" y="1745" width="66" height="58" />
-
-		<texture id="ui_inGame2_btn_sort_utility_d"				x="330" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_utility_e"				x="330" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_utility_h"				x="330" y="1745" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_utility_t"				x="330" y="1745" width="66" height="58" />
-
-		<texture id="ui_inGame2_btn_sort_consumable_d"			x="396" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_consumable_e"			x="396" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_consumable_h"			x="396" y="1745" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_consumable_t"			x="396" y="1745" width="66" height="58" />
-
-		<texture id="ui_inGame2_btn_sort_misc_d"				x="462" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_misc_e"				x="462" y="1687" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_misc_h"				x="462" y="1745" width="66" height="58" />
-		<texture id="ui_inGame2_btn_sort_misc_t"				x="462" y="1745" width="66" height="58" />
-
 		<texture id="ui_inGame2_inv_state_health"       		x="0"   y="1803" width="56" height="56" />
 		<texture id="ui_inGame2_inv_state_radia"        		x="56"  y="1803" width="56" height="56" />
 		<texture id="ui_inGame2_inv_state_acid"         		x="112" y="1803" width="56" height="56" />
@@ -200,8 +120,8 @@
 		<texture id="ui_item_picker_background"  				x="692" y="1724" width="639" height="324" />
 	</file>
 	<file name="ui\ui_actor_widescreen_sidepanels">
-	    <texture id="ui_inGame2_widescreen_sidepanels_left" 	x="0"   y="0" width="128" height="768" />
-	    <texture id="ui_inGame2_widescreen_sidepanels_right"	x="128" y="0" width="128" height="768" />
+	    <texture id="ui_inGame2_widescreen_sidepanels_left" x="0" y="0" width="128" height="768" />
+	    <texture id="ui_inGame2_widescreen_sidepanels_right" x="128" y="0" width="128" height="768" />
    </file>
 	<file name="ui\ui_actor_hint_wnd">
 	    <texture id="ui_inGame2_radiation_icon_part_1"			x="501" y="124" width="21" height="21" />
@@ -213,7 +133,7 @@
 	    <texture id="ui_inGame2_blood_icon_part_3"				x="500" y="289" width="23" height="33" />
 	</file>
 	<file name="ui\ui_actor_sleep_screen">
-	    	<texture id="ui_inGame2_weapon_highlighter"			x="220" y="549" width="82" height="353" />
+	    <texture id="ui_inGame2_weapon_highlighter"				x="220" y="549" width="82" height="353" />
 		<texture id="ui_inGame2_helmet_highlighter"    			x="306" y="549" width="96" height="98" />
 		<texture id="ui_inGame2_armor_highlighter"     			x="307" y="653" width="96" height="161" />
 		<texture id="ui_inGame2_detector_highlighter"  			x="307" y="820" width="96" height="48" />
