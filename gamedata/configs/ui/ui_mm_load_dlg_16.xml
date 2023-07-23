@@ -4,7 +4,7 @@
 <w>
   	<background x="0" y="0" width="1024" height="768">
 		<auto_static x="0" y="0" width="1024" height="768" stretch="1">
-			<texture x="0" y="0" width="1280" height="720">ui\enhancedGUI_18</texture>
+			<texture x="0" y="0" width="1280" height="720">ui\enhancedGUI_07</texture>
 		</auto_static>
 		<auto_static x="0" y="0" width="1024" height="768" stretch="1">
 			<texture>ui\enhancedGUI\gui_overlay</texture>
@@ -39,7 +39,7 @@
 		<auto_static x="18" y="55" width="286" height="190" stretch="1">
 			<texture>ui_inGame2_picture_window</texture>
 		</auto_static>
-	    <file_caption x="435" y="68" width="417" height="24">
+	    <file_caption x="550" y="68" width="417" height="24">
 		    <text font="graffiti32" r="200" g="200" b="200" align="l" vert_align="r"/>
 	    </file_caption>
 	    <file_data x="110" y="260" width="192" height="50" complex_mode="1">
