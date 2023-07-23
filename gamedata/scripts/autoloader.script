@@ -1,0 +1,38 @@
+--[[
+
+	Enhanced GUI 
+	© 2007 INCBOX INC TEAM
+    Author: EngineOfDarkness
+    
+    This work is licensed under the GPL-3.0 License 
+    
+    --------------------------------------------
+
+    This autoloader can load custom scripts right when the game starts. The only thing you need to do is create a script which ends on "_autoload.script" and contains a function called "register"
+    
+    There are no parameters that will be passed to "register" and return values are not processed either
+    
+--]]
+
+-- register Anomaly root folder as package path so that launching from Launcher or exe files in the bin\ subdirectory doesn't create problems with relative require paths
+package.path = package.path .. string.format("%s?.lua;", getFS():update_path("$fs_root$", ""))
+
+local FileLoader = require "gamedata\\scripts\\config\\FileLoader"
+
+function register()
+    local callbackFunctionName  = "register"
+    local FileLoaderInstance    = FileLoader("*_autoload.script", callbackFunctionName)
+    local loaders               = FileLoaderInstance:loadFiles()
+    
+    for _, filename in ipairs(loaders) do
+        printf("AUTOLOADER: Executing %s.%s()", filename, callbackFunctionName)
+        _G[filename][callbackFunctionName]()
+    end
+    
+    if GetEvent("reloadIniSysRequired") then
+        printf("LTX-LIBRARY: Reloading and Clearing ini cache")
+        reload_ini_sys()
+        clear_ini_cache(ini_sys)
+        SetEvent("reloadIniSysRequired", nil)
+    end
+end

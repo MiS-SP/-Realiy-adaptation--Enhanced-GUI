@@ -1,0 +1,65 @@
+--[[
+
+    Author: EngineOfDarkness
+    
+    This work is licensed under the GPL-3.0 License 
+    
+    --------------------------------------------
+
+    A script based solution that allows modders to change system.ltx properties without overwriting actual vanilla files that are part of system.ltx
+    
+    See README.md for detailed examples
+    
+--]]
+
+local Ini               = require "gamedata\\scripts\\config\\Ini"
+local ChangesetLoader   = require "gamedata\\scripts\\config\\ChangesetLoader"
+local ChangeWriter      = require "gamedata\\scripts\\config\\ChangeWriter"
+
+local SystemIniInstance       = Ini()
+local ChangesetLoaderInstance = ChangesetLoader("*_system_mod.script", "registerSystemLtxModifications")
+local ChangeWriterInstance    = ChangeWriter()
+
+local function on_console_execute(commandName)
+    if commandName == "quit" then 
+        SystemIniInstance:restoreFromBackup()
+    end
+end
+
+local function applyChangesets(changesets)
+    local hasAppliedAnyChange = false
+
+    for _, changeset in ipairs(changesets) do
+        printf("LTX-LIBRARY: Applying modifications from %s", changeset.name)
+
+        for _, change in ipairs(changeset.changes) do 
+            ChangeWriterInstance:writeChangeToIni(change, SystemIniInstance)
+
+            hasAppliedAnyChange = true
+        end
+    end
+
+    return hasAppliedAnyChange
+end
+
+local function executeLoader()
+    local changesets            = ChangesetLoaderInstance:processChangesets()
+    local hasAppliedAnyChange   = false
+
+    if #changesets > 0 then
+        hasAppliedAnyChange = applyChangesets(changesets)
+
+        if hasAppliedAnyChange then
+            SystemIniInstance:commitChanges()
+            SetEvent("reloadIniSysRequired", true)
+        end
+    end
+end
+
+function register()
+    SystemIniInstance:storeBackup()
+    
+    RegisterScriptCallback("on_console_execute", on_console_execute)
+
+    executeLoader()
+end

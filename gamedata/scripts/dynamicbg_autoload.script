@@ -1,0 +1,166 @@
+--[[
+
+	Enhanced GUI 
+	© 2007 INCBOX INC TEAM
+    Author: Nastor
+    dynamicbg_autoload.script
+    01/05/2022
+    This work is licensed under the GPL-3.0 License 
+
+    --------------------------------------------
+    This background changer randomly chooses between elements in backgrounds table and osts table, in order to 
+    dynamically change the menu background and music at game start. Custom music can be included simply by dragging .ogg file (with sampling rate at 44100khz) into sounds/music folder and then adding the filename to the OSTS table, but 
+    the addon doesn't support custom background files of arbitrary resolution since it can't be easily guessed from LUA scripts and is therefore
+    hardcoded into the XML tag; unless the custom video you want to add to the table is 1280x720, the result of custom .ogm files will be a graphical mess.
+    In case your video files are compatible with the above mentioned resolution, simply add them to the ui/textures folder, and add the filename to the BACKGROUNDS table.
+
+    ! ATTENTION ! 
+    This script requires Stalker-Anomaly-Ltx-Loader addon from EngineOfDarkness, and is distributed altogether with it.
+    To revert to default Anomaly menu, simply delete every file extracted and replace the two XMLs with the ones in the BKP folder, in case you didn't backup them yourself (bad practice!)
+--]]
+
+
+
+
+UI_PATH =       "gamedata/configs/ui"
+ui_mm_main_16 =  UI_PATH.."/ui_mm_main_16.xml"
+ui_options_16 = UI_PATH.."/ui_options_16.xml"
+ui_credits_16 = UI_PATH.."/ui_credits_16.xml"
+ui_mcm_16 = UI_PATH.."/ui_mcm_16.xml"
+ui_mm_load_dlg_16 = UI_PATH.."/ui_mm_load_dlg_16.xml"
+ui_mm_save_dlg_16 = UI_PATH.."/ui_mm_save_dlg_16.xml"
+ui_mm_faction_select_16 =  UI_PATH.."/ui_mm_faction_select_16.xml"
+BACKGROUNDS =   {"enhancedGUI_00","enhancedGUI_01","enhancedGUI_02","enhancedGUI_03","enhancedGUI_04","enhancedGUI_05","enhancedGUI_06","enhancedGUI_07","enhancedGUI_08","enhancedGUI_09","enhancedGUI_10","enhancedGUI_11","enhancedGUI_12","enhancedGUI_13","enhancedGUI_14","enhancedGUI_15","enhancedGUI_16","enhancedGUI_17","enhancedGUI_18","enhancedGUI_19","enhancedGUI_20","enhancedGUI_21","enhancedGUI_22","enhancedGUI_23","enhancedGUI_24","enhancedGUI_25","enhancedGUI_26","enhancedGUI_27","enhancedGUI_28"}
+OSTS =          {"pripyat_whispers_final","karlcasey_whitebat_creepingfog","metro_mainmenu","pripyat_whispers_final","metro_mainmenu","wastelandCorridors_Svartsinn","anomaly_ilya_ponomarenko_day_one","meganMcDuffee_DontGoInThere","annihilation_the_alien","stalker2_Mass","menu"}
+
+-- Randomize at start
+math.randomseed(os.time())
+math.random(); math.random(); math.random() -- Needed for entropy
+RANDOM_BG =     "<texture x=\"0\" y=\"0\" width=\"1280\" height=\"720\">ui\\"..BACKGROUNDS[math.random(#BACKGROUNDS)].."</texture>"
+math.randomseed(os.time()+25)
+math.random(); math.random(); math.random() -- Needed for entropy
+RANDOM_OST =    "<menu_music>music\\"..OSTS[math.random(#OSTS)].."</menu_music>"
+
+function can_be_red(fname)
+   local f=io.open(fname,"r")
+   if f~=nil then io.close(f) return true else return false end
+end
+
+function randomize_and_replace(newbg)
+	-- UI_MM_MAIN_16 (WITH MUSIC)
+	if(can_be_red(ui_mm_main_16)) then
+        local file = assert(io.open(ui_mm_main_16))
+        local xml = file:read"*a"
+        file:close()
+        for s in xml:gmatch("<texture.->.-</texture>") do
+        	xml = xml:gsub(s,RANDOM_BG)
+        	break
+        end
+        for s in xml:gmatch("<menu_music>.-</menu_music>") do
+            xml = xml:gsub(s,RANDOM_OST)
+        end
+        local file = assert(io.open(ui_mm_main_16,"w"))
+        file:write(xml)
+        file:close()
+    end
+
+    -- UI_OPTIONS_16
+    if(can_be_red(ui_options_16)) then
+    	local file = assert(io.open(ui_options_16))
+        local xml = file:read"*a"
+        file:close()
+        for s in xml:gmatch("<texture.->.-</texture>") do
+        	printf(s)
+        	xml = xml:gsub(s,RANDOM_BG)
+        	break
+        end
+
+        local file = assert(io.open(ui_options_16,"w"))
+        file:write(xml)
+        file:close()
+    end
+
+    -- UI_LOAD_16
+    if(can_be_red(ui_mm_load_dlg_16)) then
+    	local file = assert(io.open(ui_mm_load_dlg_16))
+        local xml = file:read"*a"
+        file:close()
+        for s in xml:gmatch("<texture.->.-</texture>") do
+        	printf(s)
+        	xml = xml:gsub(s,RANDOM_BG)
+        	break
+        end
+
+        local file = assert(io.open(ui_mm_load_dlg_16,"w"))
+        file:write(xml)
+        file:close()
+    end
+
+    -- UI_SAVE_16
+    if(can_be_red(ui_mm_save_dlg_16)) then
+    	local file = assert(io.open(ui_mm_save_dlg_16))
+        local xml = file:read"*a"
+        file:close()
+        for s in xml:gmatch("<texture.->.-</texture>") do
+        	printf(s)
+        	xml = xml:gsub(s,RANDOM_BG)
+        	break
+        end
+
+        local file = assert(io.open(ui_mm_save_dlg_16,"w"))
+        file:write(xml)
+        file:close()
+    end
+
+    -- ui_mm_faction_select_16
+    if(can_be_red(ui_mm_faction_select_16)) then
+    	local file = assert(io.open(ui_mm_faction_select_16))
+        local xml = file:read"*a"
+        file:close()
+        for s in xml:gmatch("<texture.->.-</texture>") do
+        	printf(s)
+        	xml = xml:gsub(s,RANDOM_BG)
+        	break
+        end
+
+        local file = assert(io.open(ui_mm_faction_select_16,"w"))
+        file:write(xml)
+        file:close()
+    end
+
+    -- ui_credits_16
+    if(can_be_red(ui_credits_16)) then
+    	local file = assert(io.open(ui_credits_16))
+        local xml = file:read"*a"
+        file:close()
+        for s in xml:gmatch("<texture.->.-</texture>") do
+        	printf(s)
+        	xml = xml:gsub(s,RANDOM_BG)
+        	break
+        end
+
+        local file = assert(io.open(ui_credits_16,"w"))
+        file:write(xml)
+        file:close()
+    end
+
+    -- MCM
+    if(can_be_red(ui_mcm_16)) then
+    	local file = assert(io.open(ui_mcm_16))
+        local xml = file:read"*a"
+        file:close()
+        for s in xml:gmatch("<texture.->.-</texture>") do
+        	printf(s)
+        	xml = xml:gsub(s,RANDOM_BG)
+        	break
+        end
+
+        local file = assert(io.open(ui_mcm_16,"w"))
+        file:write(xml)
+        file:close()
+    end
+end
+
+function register()
+	randomize_and_replace()
+end
