@@ -228,24 +228,18 @@
 		<texture id="ui_companion_trade_btn_t" x="500" y="700" width="10" height="10" />
 	</file>
 	
-	<file name="ui\ui_body_health_system3">
+	<file name="ui\ui_body_health_system">
 		<!-- body health system -->
-		<texture id="ui_hud_bhs_bg"		x="0" y="12" width="317" height="217" />
-		<texture id="ui_hud_bhs_health"		x="426" y="0" width="48" height="124" />
-		<texture id="ui_hud_bhs_bar"		x="0" y="229" width="38" height="5" />
-		<texture id="ui_hud_bhs_bar_green"		x="38" y="229" width="38" height="5" />
-		<texture id="ui_hud_bhs_stamina"		x="0" y="235" width="134" height="14" />
-		
+		<texture id="ui_hud_bhs_bg"		x="0" y="0" width="196" height="176" />
+		<texture id="ui_hud_bhs_health"		x="208" y="0" width="48" height="124" />
+		<texture id="ui_hud_bhs_bar"		x="0" y="176" width="38" height="5" />
+		<texture id="ui_hud_bhs_bar_green"		x="38" y="176" width="38" height="5" />
+		<texture id="ui_hud_bhs_stamina"		x="0" y="182" width="134" height="14" />
+		<texture id="ui_inGame2_Patroni_HUD_gold_bar"		x="0" y="232" width="133.3" height="2.6" />
 
-		<texture id="ui_hud_bhs_health_bg"		x="426" y="132" width="48" height="124" />
-		<texture id="ui_hud_bhs_bar_bg"		x="0" y="265" width="38" height="5" />
-		<texture id="ui_hud_bhs_stamina_bg"		x="0" y="250" width="134" height="14" />
+		<texture id="ui_hud_bhs_health_bg"		x="208" y="132" width="24" height="72" />
+		<texture id="ui_hud_bhs_bar_bg"		x="0" y="212" width="38" height="5" />
+		<texture id="ui_hud_bhs_stamina_bg"		x="0" y="197" width="134" height="14" />
+        
 	</file>
-	<!--
-	<file name="ui\ui_body_health_system2">
-		<texture id="ui_hud_bhs_ammo_bg"		x="175" y="100" width="109" height="72" />
-		<texture id="ui_hud_bhs_quick_bg"		x="19" y="172" width="156" height="41" />
-		
-	</file>	-->
-
 </w>
