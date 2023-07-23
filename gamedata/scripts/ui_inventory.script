@@ -97,7 +97,7 @@ function start(mode, obj)
 		return
 	end
 	
-	if (mode == "loot") and is_shift_pressed then
+	if (mode == "loot" and not IsInvbox(obj)) and is_shift_pressed then
 		return
 	end
 	
@@ -612,7 +612,7 @@ function UIInventory:ParseInventory(npc, all, id_list, ignore_kind)
 		else
 			npc:iterate_ruck(iterate,nil)
 		end
-	elseif npc and self.npc_is_box then
+	elseif self.npc_is_box then
 		npc:iterate_inventory_box(iterate,nil)
 	end
 	
@@ -622,7 +622,7 @@ end
 function UIInventory:ParseInventory_Companion(npc, id_list, ignore_kind)
 	-- only for alive NPCs, player shouldn't get NPC equipped items
 	-- companions are a special case, player can only get their assigned items
-	if npc == nil then return end
+	
 	local npc_id = npc:id() 
 	local inv = {}
 	local size_c = 0
@@ -1369,7 +1369,7 @@ function UIInventory:ShowFaction(v, view)
 		self.npc_community_overlay:InitTexture(texture)
 		self.npc_up_community_overlay:InitTexture(texture)
 	else
-		self.npc_community_overlay:InitTexture("ui_inGame2_na")
+		self.npc_community_overlay:InitTexture("ui_inGame2_na") 
 		self.npc_up_community_overlay:InitTexture("ui_inGame2_na")
 	end
 end
@@ -1406,6 +1406,8 @@ end
 -- master: 35000, 1100
 -- legend: 50000, 1500
 
+
+
 function UIInventory:ShowRank(v, view)
 	local texture = "ui_rank_0"
 	--printdbg("# UIInventory:ShowRank | Rank Number %s", v)
@@ -1424,7 +1426,7 @@ function UIInventory:ShowRank(v, view)
 	if(view == "player") then
 		self.player_rank_icon:InitTexture(texture) 
 	elseif (view == "npc") then
-		self.npc_rank_icon:InitTexture(texture)
+		self.npc_rank_icon:InitTexture(texture) 
 		self.npc_up_rank_icon:InitTexture(texture) 
 	else
 		self.npc_rank_icon:InitTexture("ui_rank_0") 
@@ -2946,7 +2948,7 @@ function UIInventory:RMode_EvaluateUpgr(row, col, ii, info)
 	end
 	if (not prev_installed) then
 		ret = 2
-		prereq = prereq .. "\\n - " .. game.translate_string("st_upgr_parents")
+		prereq = prereq .. "\\n � " .. game.translate_string("st_upgr_parents") --sota "\\n - "
 	end
 	
 	-- Finale
@@ -3422,6 +3424,7 @@ function UIInventory:On_CC_Mouse1_DB(bag, idx)
 		else
 			self:Action_Move(obj, bag)
 		end
+		return true -- continue double clicking!
 		
 	-- Execute first custom property that support double-click
 	else
@@ -3742,6 +3745,17 @@ function UIInventory:OnKeyboard(dik, keyboard_action)
 			-- Exit
 			elseif dik == DIK_keys.DIK_ESCAPE then
 				self:Close()
+				
+			-- PDA
+			elseif bind == key_bindings.kACTIVE_JOBS then
+				if (db.actor:item_in_slot(8)) then
+					self:Close()
+					if (get_console_cmd(1,"g_3d_pda")) then
+						db.actor:activate_slot(8)
+					else
+						ActorMenu.get_pda_menu():ShowDialog(true)
+					end
+				end
 				
 			-- Sort tabs
 			else
