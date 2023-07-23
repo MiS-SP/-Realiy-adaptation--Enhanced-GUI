@@ -3,7 +3,7 @@
 
 <window>
 	<minimap>
-		<level_frame x="1.242" y="0.876" width="0.200" height="0.200" stretch="1" alignment="c" a="152"/>
+		<level_frame x="0.1" y="0.117" width="0.200" height="0.200" stretch="1" alignment="c" a="152"/>
 
 		<background width="0.35" height="0.38" stretch="1" alignment="c">
 			<texture>ui\squaredov\minimap</texture>
