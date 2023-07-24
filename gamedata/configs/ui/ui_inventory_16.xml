@@ -412,7 +412,7 @@
 				<text complex_mode="1" font="letterica18" align="r" vert_align="b" a="100" r="187" g="159" b="100"/>
 			</txt_8>
 			
-			<btn_9 x="0" y="280" width="27" height="32" hint="ui_st_tab_upgrades" stretch="1">
+			<!-- <btn_9 x="0" y="280" width="27" height="32" hint="ui_st_tab_upgrades" stretch="1">
 				<texture>ui_inGame2_btn_sort_upgrades</texture>
 			</btn_9>
 			<txt_9 x="6" y="284" width="20" height="25" stretch="1">
@@ -424,7 +424,7 @@
 			</btn_10>
 			<txt_10 x="6" y="319" width="20" height="25" stretch="1">
 				<text complex_mode="1" font="letterica18" align="r" vert_align="b" a="100" r="187" g="159" b="100"/>
-			</txt_10>
+			</txt_10> -->
 		</sorter>
 
 		<actor_state_info x="394" y="-32" width="274" height="190">
