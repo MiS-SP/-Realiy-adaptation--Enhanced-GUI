@@ -447,14 +447,8 @@ function UIInventory:InitControls()
 	self.sort_dialog            = xml:InitStatic("equipment:sorter", self.equ_dialog)
 	self.sort_btn = {}
 	self.sort_num = {}
-    
-
---[[Bartoche70 for my addon Bart's New Sorting Tabs	30/10/2020
-    -------------------------------------------------------
-	--for i=1,8 do  --> because tabs are now 10
---]]	
 	
-	for i=1,10 do
+	for i=1,8 do
     	
 		self.sort_btn[i] 		= xml:InitCheck("equipment:sorter:btn_" .. i, self.sort_dialog)
 		self.sort_btn[i]:SetCheck(false)
@@ -470,7 +464,7 @@ function UIInventory:InitControls()
 	end
 	
 	-- Trash can
-	self.trash				  	= xml:InitStatic("npc:trash", self)
+	self.trash	= xml:InitStatic("npc:trash", self)
 	
 	-- Item picker
 	self.CC["picker"] = utils_ui.UICellContainer("picker", self, nil, "equipment:cont_picker", self.equ_dialog, nil)
